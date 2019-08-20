@@ -40,7 +40,7 @@ class QuestionModelTest(TestCase):
             in the past, positive for questions that have yet to be published)
             """
             time = timezone.now() + datetime.timedelta(days=days)
-            return Questino.objects.create(question_text=question_text, pub_date=time)
+            return Question.objects.create(question_text=question_text, pub_date=time)
 
 
         class QuestionIndexViewTests(TestCase):
